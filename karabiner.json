@@ -43,7 +43,34 @@
                         ]
                     },
                     {
-                        "description": "alt to spacebar if press alone",
+                        "description": "right_shift to space if press alone",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "right_shift",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_shift"
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "spacebar"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "alt to return_or_enter if press alone",
                         "manipulators": [
                             {
                                 "from": {
@@ -61,8 +88,7 @@
                                 ],
                                 "to_if_alone": [
                                     {
-                                        "hold_down_milliseconds": 50,
-                                        "key_code": "spacebar"
+                                        "key_code": "return_or_enter"
                                     }
                                 ],
                                 "type": "basic"
@@ -70,11 +96,11 @@
                         ]
                     },
                     {
-                        "description": "right shift to enter if press alone",
+                        "description": "left command to command shift tab if press alone",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "right_shift",
+                                    "key_code": "left_command",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -83,13 +109,16 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "left_shift"
+                                        "key_code": "left_command"
                                     }
                                 ],
                                 "to_if_alone": [
                                     {
-                                        "hold_down_milliseconds": 50,
-                                        "key_code": "return_or_enter"
+                                        "key_code": "tab",
+                                        "modifiers": [
+                                            "left_shift",
+                                            "left_command"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -118,6 +147,19 @@
                     "identifiers": {
                         "is_keyboard": true,
                         "is_pointing_device": false,
+                        "product_id": 258,
+                        "vendor_id": 10730
+                    },
+                    "ignore": false,
+                    "manipulate_caps_lock_led": false,
+                    "simple_modifications": []
+                },
+                {
+                    "disable_built_in_keyboard_if_exists": false,
+                    "fn_function_keys": [],
+                    "identifiers": {
+                        "is_keyboard": false,
+                        "is_pointing_device": true,
                         "product_id": 258,
                         "vendor_id": 10730
                     },
@@ -226,7 +268,7 @@
             ],
             "name": "Default profile",
             "parameters": {
-                "delay_milliseconds_before_open_device": 1000
+                "delay_milliseconds_before_open_device": 500
             },
             "selected": true,
             "simple_modifications": [],

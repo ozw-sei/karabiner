@@ -1,59 +1,85 @@
 {
-  "title": "Change shift key (rev 2)",
-  "rules": [
-    {
-      "description": "Change left_shift to space if pressed alone (rev 2)",
-      "manipulators": [
+    "title": "Change shift key (rev 2)",
+    "rules": [
         {
-          "type": "basic",
-          "from": {
-            "key_code": "left_shift",
-            "modifiers": {
-              "optional": [
-                "any"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "left_shift"
-            }
-          ],
-          "to_if_alone": [
-            {
-              "key_code": "spacebar", 
-              "hold_down_milliseconds": 50
-            }
-          ]
-        }
-      ]
-    },
-      {
-          "description": "alt to spacebar if press alone",
-          "manipulators": [
+            "description": "Change left_shift to space if pressed alone (rev 2)",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "left_shift",
+                        "modifiers": {
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "left_shift"
+                        }
+                    ],
+                    "to_if_alone": [
+                        {
+                            "key_code": "spacebar", 
+                            "hold_down_milliseconds": 50
+                        }
+                    ]
+                }
+            ]
+        },
         {
-          "type": "basic",
-          "from": {
-            "key_code": "left_alt",
-            "modifiers": {
-              "optional": [
-                "any"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "left_alt"
-            }
-          ],
-          "to_if_alone": [
-            {
-                "key_code": "spacebar",
-                "hold_down_milliseconds": 50
-            }
-          ]
+            "description": "right_shift to space if press alone",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "right_shift",
+                        "modifiers": {
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "right_shift"
+                        }
+                    ],
+                    "to_if_alone": [
+                        {
+                            "key_code": "spacebar",
+                            "hold_down_milliseconds": 50
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "alt to return_or_enter if press alone",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "left_alt",
+                        "modifiers": {
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "left_alt"
+                        }
+                    ],
+                    "to_if_alone": [
+                        {
+                            "key_code": "return_or_enter"
+                        }
+                    ]
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
